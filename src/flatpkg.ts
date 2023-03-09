@@ -28,7 +28,9 @@ program
     }
 
     const files = ["**"];
-    const pkg = require(process.cwd() + "/package.json");
+    const pkg = JSON.parse(
+      fs.readFileSync(process.cwd() + "/package.json").toString()
+    );
     let version = pkg.version;
     if (opts.bump) {
       version = semver.inc(version, opts.bump);
