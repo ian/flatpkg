@@ -1,0 +1,11 @@
+{
+  "name": "flatpkg",
+  "version": "0.0.0",
+  "description": "Ship flattened NPM package easily.",
+  "main": "index.js",
+  "bin": {
+    "flatpkg": "./flatpkg.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
