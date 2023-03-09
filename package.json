@@ -1,6 +1,6 @@
 {
   "name": "flatpkg",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Ship flattened NPM package easily.",
   "main": "dist/flatpkg.js",
   "module": "dist/flatpkg.mjs",

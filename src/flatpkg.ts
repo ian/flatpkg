@@ -18,8 +18,6 @@ program
   .argument("[dirs...]")
   .option("-b, --bump <major, minor, patch, premajor, preminor>")
   .action(async (args, opts) => {
-    console.log({ args, opts });
-
     const distDir = process.cwd() + "/.pkg";
 
     if (args.length == 0) {
@@ -71,7 +69,10 @@ program
       console.log(res.report);
     });
 
-    execSync("npm publish", { stdio: "inherit", cwd: distDir });
+    try {
+      execSync("npm publish", { stdio: "inherit", cwd: distDir });
+    } catch (err) {}
+
     fs.rmSync(distDir, { recursive: true });
   });
 
