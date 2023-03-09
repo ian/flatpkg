@@ -2,10 +2,27 @@
   "name": "flatpkg",
   "version": "0.0.0",
   "description": "Ship flattened NPM package easily.",
-  "main": "index.js",
+  "main": "dist/flatpkg.js",
+  "module": "dist/flatpkg.mjs",
   "bin": {
-    "flatpkg": "./flatpkg.js"
+    "flatpkg": "dist/flatpkg.mjs"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "commander": "^10.0.0",
+    "fs-extra": "^11.1.0",
+    "semver": "^7.3.8",
+    "tree-cli": "^0.6.7"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.14.6",
+    "@types/semver": "^7.3.13",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  }
 }
